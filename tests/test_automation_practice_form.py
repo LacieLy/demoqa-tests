@@ -30,3 +30,9 @@ def test_practice_form():
     ss('.custom-checkbox').element_by(have.exact_text('Music')).click()
 
 #Picture
+
+
+#Address
+    s('#currentAddress').type('SPB')
+    s('#react-select-3-input').type('NCR').press_enter()
+    s('#react-select-4-input').type('Delhi').press_enter()
