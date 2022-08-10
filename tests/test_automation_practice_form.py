@@ -13,7 +13,7 @@ def test_practice_form():
     s('#userEmail').type('Lyn@mail.com')
     # s('//*[contains(@class, "custom-radio")][contains (.//text(), "Female")]')
     ss('.custom-radio').element_by(have.exact_text('Female')).click()
-    s('#userNumber').type('199966633')
+    s('#userNumber').type('6666666666')
 
 #Date of Birth
     s('#dateOfBirthInput').click()
@@ -36,3 +36,6 @@ def test_practice_form():
     s('#currentAddress').type('SPB')
     s('#react-select-3-input').type('NCR').press_enter()
     s('#react-select-4-input').type('Delhi').press_enter()
+
+
+    s('#submit').click()
