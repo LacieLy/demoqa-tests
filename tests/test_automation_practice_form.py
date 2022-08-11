@@ -4,7 +4,6 @@ from selene.support.shared.jquery_style import s, ss
 
 
 def test_practice_form():
-
     browser.open('/automation-practice-form')
 
 #General info
@@ -37,5 +36,7 @@ def test_practice_form():
     s('#react-select-3-input').type('NCR').press_enter()
     s('#react-select-4-input').type('Delhi').press_enter()
 
+    s('#submit').perform(command.js.click)
+    #s('#submit').click()
 
-    s('#submit').click()
+#Assert
