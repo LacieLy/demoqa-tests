@@ -9,7 +9,7 @@ def test_practice_form():
 #General info
     s('#firstName').type('Lacie')
     s('#lastName').type('Lyn')
-    s('#userEmail').type('Lyn@mail.com')
+    s('#userEmail').type('Lyn@gmail.com')
     # s('//*[contains(@class, "custom-radio")][contains (.//text(), "Female")]')
     ss('.custom-radio').element_by(have.exact_text('Female')).click()
     s('#userNumber').type('6666666666')
@@ -37,6 +37,9 @@ def test_practice_form():
     s('#react-select-4-input').type('Delhi').press_enter()
 
     s('#submit').perform(command.js.click)
-    #s('#submit').click()
 
 #Assert
+    ss(".table-responsive").should(have.texts(
+        'Lacie Lyn',
+        'Lyn@gmail.com'
+    ))
